@@ -207,7 +207,7 @@ class WechatArticleParser:
         except PlaywrightTimeoutError as exc:
             raise ArticleFetchError("Playwright 抓取超时。") from exc
         except Exception as exc:
-            raise ArticleFetchError(&"Playwright 抓取失败: {exc}") from exc
+            raise ArticleFetchError(f"Playwright 抓取失败: {exc}") from exc
 
     def _parse_article(
         self,
